@@ -1,0 +1,60 @@
+<table border="0" width="100%">
+    <tr>
+        <td>&nbsp;</td>
+        <td width="600">
+<table border="0" width="100%">
+    <tr>
+    <td width="100%" align="center"><b><{$lang_VIEWID}> <{$xent_cr_job_id}></b> (<{$xent_cr_jobposteddate}>)</td>
+    </tr>
+</table><br>
+ <table width="100%" align="center" border="1" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="2">
+            	<tr>
+                	<td width="30%" bgcolor="#2F5376" id="joblistheader"><b><{$lang_VIEWTITRE}></b></td>
+                    <td align="left" id="joblist"><a href="desctitre.php?op=XENT_CR_DescTitre&id=<{$titreposte_id}>"><{$xent_cr_titres}></a></td>
+                </tr>
+                <tr>
+                	<td width="30%" bgcolor="#2F5376" id="joblistheader"><b><{$lang_VIEWTYPEPOSTE}></b></td>
+                    <td align="left" id="joblist"><{$xent_cr_typeposte}></td>
+                </tr>
+                <tr>
+                	<td width="30%" bgcolor="#2F5376" id="joblistheader"><b><{$lang_VIEWLOCATION}></b></td>
+                    <td align="left" id="joblist"><{$xent_cr_locations}></td>
+                </tr>
+                <!-- <tr>
+                	<td width="30%" bgcolor="#2F5376" id="joblistheader"><b><{$lang_VIEWSTARTDDATE}></b></td>
+                    <td align="left" id="joblist"><{$xent_cr_jobstartdate}></td>
+                </tr>
+                <tr>
+                	<td width="30%" bgcolor="#2F5376" id="joblistheader"><b><{$lang_VIEWENDDATE}></b></td>
+                    <td align="left" id="joblist"><{$xent_cr_jobenddate}></td>
+                </tr> -->
+            </table><br>
+			<table border="0" width="100%">
+                <tr>
+                    <td width="100%">
+
+						<{$postuler.javascript}>
+						<font size="4"><u><{$postuler.title}></u></font>
+                        <form name="<{$postuler.name}>" action="<{$postuler.action}>" method="<{$postuler.method}>"<{$postuler.extra}>>
+                            <table border="0" summary="">
+
+							<{foreach item=element from=$postuler.elements}>
+
+                            <tr>
+							<td><{$element.caption}></td>
+							<td><{$element.body}></td>
+							</tr>
+
+
+                            <{/foreach}>
+
+							</table>
+							</form>
+                    </td>
+
+                </tr>
+            </table><br>
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
